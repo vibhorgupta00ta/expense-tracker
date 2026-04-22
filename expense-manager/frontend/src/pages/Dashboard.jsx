@@ -12,7 +12,7 @@ export default function Dashboard() {
   const [filter, setFilter] = useState("");
 
   const fetchExpenses = async () => {
-    const res = await axios.get("http://localhost:5000/api/expenses", {
+    const res = await axios.get("/expense", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`
       }
@@ -22,7 +22,7 @@ export default function Dashboard() {
 
   const addExpense = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:5000/api/expense", form, {
+    await axios.post("/expense", form, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`
       }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import axios from "../api";
 import { useNavigate, Link } from "react-router-dom";
 
 export default function Login() {
@@ -15,7 +15,7 @@ export default function Login() {
     e.preventDefault();
     try {
       setError("");
-      const res = await axios.post("http://localhost:5000/api/auth/login", form);
+      const res = await axios.post("/auth/login", form);
       localStorage.setItem("token", res.data.token);
       navigate("/dashboard");
     } catch (error) {
