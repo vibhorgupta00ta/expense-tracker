@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://expense-tracker-atss.onrender.com",
+  baseURL: "https://expense-tracker-atss.onrender.com/api",
 });
