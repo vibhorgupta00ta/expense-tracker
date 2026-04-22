@@ -11,8 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://expense-tracker-tau-six-13.vercel.app/",
-    credentials: true,
+    origin: "*"
   })
 );
 app.use(express.json());
