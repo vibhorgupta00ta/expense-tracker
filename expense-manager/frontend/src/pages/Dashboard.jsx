@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from "../api";
 import Navbar from "../components/Navbar";
 
 export default function Dashboard() {
